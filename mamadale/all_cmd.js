@@ -303,7 +303,7 @@ return await conn.sendMessage(from , { text: '*Error !!*' }, { quoted: mek } )
 }
 var mesaj = '';
 arama.all.map((video) => {
-mesaj += ' *📍' + video.title + '*\n🌟📃 ' + video.url + '\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*\n\n*<><><><><><><><><><><>*'
+mesaj += ' *📍' + video.title + '*\n🌟📃 ' + video.url + '\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*\n\n*<><><><><><><><><><><>*\n'
 });
 await conn.sendMessage(from , { text:  mesaj }, { quoted: mek } )
 } catch (e) {
@@ -1189,8 +1189,8 @@ cmd(img2UrlCommand, async (context, args, utils, { reply, quoted }) => {
 
 cmd(
   {
-    pattern: 'img',
-    alias: ['image', 'pinterest', 'pinimg'],
+    pattern: 'imdjdjdhg',
+    //alias: ['image', 'pinterest', 'pinimg'],
     react: '\uD83D\uDDBC️',
     desc: 'Search and download images from Pinterest using keywords.',
     category: 'image',
@@ -1264,11 +1264,7 @@ cmd({
 
   try {
 
-    const menuText = `
-
-
-╭•╼━═━━≺• 𝕄𝔼ℕ𝕌 •≻━━═━╾•╮
-
+    const menuText = `╭•╼━═━━≺• 𝕄𝔼ℕ𝕌 •≻━━═━╾•╮
 *👋 𝐻𝑜𝑤 𝐴𝑟𝑒 𝑌𝑜𝑢 ${pushname} 🌹*
 
 * ⌚ *яυи τιмє* - 
@@ -1279,13 +1275,14 @@ cmd({
 > 2.00
 * 🗃️ *нοѕτ иαмє* - 
 > ${os.hostname()}
+* 🗃️ *σωηєя иαмє* - 
+> ${ownerName}
 
 *➥ 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 🔐*
 
 ╭────❲ *ʀᴇᴘʟʏ ɴᴜᴍʙᴇʀ* ❳────╮
 ┃✺╭────────────···▸
-┻✺│ 
-│✺│⥃◈ *1  • 𝐎ᴡɴᴇʀ 𝐌ᴇɴᴜ*
+┻✺│⥃◈ *1  • 𝐎ᴡɴᴇʀ 𝐌ᴇɴᴜ*
 │✺│⥃◈ *2  • 𝐂ᴏɴᴠᴇʀᴛ 𝐌ᴇɴᴜ*
 │✺│⥃◈ *3  • 𝐁ᴜɢ 𝐌ᴇɴᴜ*
 │✺│⥃◈ *4  • 𝐒ᴇᴀʀᴄʜ 𝐌ᴇɴᴜ*
@@ -1294,19 +1291,18 @@ cmd({
 │✺│⥃◈ *7  • 𝐆ʀᴏᴜᴘ 𝐌ᴇɴᴜ*
 │✺│⥃◈ *8  • 𝐅ᴜɴ 𝐌ᴇɴᴜ*
 │✺│⥃◈ *9  • 𝐀ɪ 𝐌ᴇɴᴜ*
-│✺│⥃◈ *10 • 𝐎ᴛʜᴇʀ 𝐌ᴇɴᴜ*
-┳✺│
+┳✺│⥃◈ *10 • 𝐎ᴛʜᴇʀ 𝐌ᴇɴᴜ*
 ┃✺╰────────────···▸
 ╰━═════════════━⦁┄⃟
 *🫟𝐐𝚵𝚵𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2‼️*
 
-> *𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 🫟*`;
+> *𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ❀*`;
 
     // Send Menu Message
  const sentMenuMessage = await bot.sendMessage(
   from,
   {
-    image: { url: "https://i.ibb.co/BsjkCDP/9555.jpg" },
+    image: { url: "https://i.ibb.co/MDX3Bbpt/9999.jpg" },
     caption: menuText,
     contextInfo: {
       mentionedJid: [],
@@ -1314,7 +1310,7 @@ cmd({
       forwardingScore: 1,
       forwardedNewsletterMessageInfo: {
         newsletterJid: "120363368882758119@newsletter",
-        newsletterName: "ꪶ𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃ꫂ",
+        newsletterName: "🌹𝐐𝚵𝚵𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃‼️",
         serverMessageId: 999,
       },
     },
@@ -1390,15 +1386,15 @@ cmd({
 > *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
 
       '3': { imageCaption: 
-`*꧁◈╾───☉ ᴍᴏᴠɪᴇ ᴍᴇɴᴜ ☉───╼◈꧂*
+`*꧁◈╾───☉ ʙᴜɢ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
-│ ➽ *sinhalasub*
-> ꜱɪɴʜᴀʟᴀ ꜱᴜʙ ᴛɪᴛʟᴇ ᴍᴏᴠɪᴇ ᴅᴀᴡɴʟᴏᴀᴅ
-│ ➽ *cartoon*
-> ᴄᴀʀᴛᴏᴏɴ ᴅᴀᴡɴʟᴏᴀᴅ
-│ ➽ *baiscope*
-> ʙɪꜱᴄᴏᴘᴇ ᴍᴏᴠɪᴇ ᴅᴀᴡɴʟᴏᴀᴅ
+│ ➽ **
+> 
+│ ➽ **
+> 
+│ ➽ **
+> 
 ╰────────────────────●●►
 
 
@@ -1677,7 +1673,7 @@ if (!isAdmins) return reply(ADMIN)
                 reply(`Close time ${q} starting from now`)
                 setTimeout(() => {
                     var nomor = m.participant
-                    const close = `*CLOSE TIME* GROUP CLOSED BY 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 AT APPROVED ADMIN\nNOW ONLY ADMIN CAN SEND MESSAGES 🔐`
+                    const close = `• ℂ𝕃𝕆𝕊𝔼 𝕋𝕀𝕄𝔼 :* _The Group Was Closed By 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 To Approved Adming_\n\n*‼️NOW ONLY ADMIN CAN SEND MESSAGE ‼️*\n\n> *𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 🫟*`
                     conn.groupSettingUpdate(from, 'announcement')
                     reply(close)
                 }, timer)
@@ -1955,7 +1951,7 @@ async (conn, mek, m, { from }) => {
         // Owner's contact info
         const ownerNumber = '+94727319036'; // Replace this with the actual owner number
         const ownerName = '> *𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃*'; // Replace this with the owner's name
-        const organization = '*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 WHATSAPP BOT DEVALOPER 💗🧚‍♂️'; // Optional: replace with the owner's organization
+        const organization = '*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 WHATSAPP BOT DEVALOPER 💗🧚‍♂️'; // Optional: replace with the owner's organization
 
         // Create a vCard (contact card) for the owner
         const vcard = 'BEGIN:VCARD\n' +
@@ -2055,7 +2051,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
 
         // Send the ping result
         await conn.sendMessage(from, { 
-            text: `*𝐐𝐔𝚵𝚵𝐍 𝐑𝚫𝐒𝐇𝐔 𝐌𝐃 𝐒𝐏𝐄𝐄𝐃 : ${ping}ms*\n\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`, 
+            text: `*𝐐𝐔𝚵𝚵𝐍 𝐑𝚫𝐒𝐇𝐔 𝐌𝐃 𝐕2 𝐒𝐏𝐄𝐄𝐃 : ${ping}ms*\n\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`, 
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
@@ -2207,7 +2203,7 @@ cmd({
     const response = await axios.get(apiUrl, { responseType: 'arraybuffer' });
     const buffer = Buffer.from(response.data, 'binary');
     
-    await conn.sendMessage(m.chat, { image: buffer }, { quoted: m, caption: 'QR Code By Queen Rashu Md' });
+    await conn.sendMessage(m.chat, { image: buffer }, { quoted: m, caption: 'QR Code By QUEEN RASHU MD V2' });
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
@@ -2217,7 +2213,7 @@ cmd({
 cmd({
     pattern: "repo",
     alias: ["sc","mrrashu","deploy","reposity","github","info2"],
-    desc: "Check The Queen Rashu Md Bot github",
+    desc: "Check The QUEEN RASHU MD V2 Bot github",
     category: "main",
     react: "🌟",
     filename: __filename
@@ -2226,12 +2222,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
         // Generate system status message
         const status = `*╭┉┉※𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐈𝐍𝐅𝐎※┉┉╮*\n\n\n*☬ ʋҽɾƚισɳ              :* _v0.1_\n*☬ ԃҽʋҽʅσρҽɾ        :* _Nipun Harshana_\n*☬ ɾҽρσ υʂҽɾɳαɱҽ :* _NipunHarshana0_\n\n*╭┉┉┉┉┉┉┉┉※ 𝐋𝐈𝐍𝐊𝐒 ※┉┉┉┉┉┉┉┉╮*\n\n* *𝑩𝑶𝑻 𝑮𝑰𝑻𝑯𝑼𝑩*
-> https://github.com/NipunHarshana0/QUEEN-RASHU-MD-V1\n* *𝑾𝑯𝑨𝑻𝑺𝑨𝑷𝑷 𝑮𝑹𝑶𝑼𝑷*\n> https://chat.whatsapp.com/LmfWnYTjh605xVz5J1tgnq\n* *𝑶𝑾𝑵𝑬𝑹 𝑪𝑶𝑵𝑻𝑨𝑪𝑻*\n> wa.me/94727319036\n* *𝒀𝑶𝑼𝑻𝑼𝑩𝑬 𝑪𝑯𝑨𝑵𝑵𝑬𝑳*\n> https://youtube.com/@rashumodz_0715?si=5pg_wumwy6VzizMP\n\n~𝘽𝙊𝙏 𝘾𝙊𝙈𝙈𝙄𝙉𝙂 𝙎𝙊𝙊𝙉~\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*
+> https://github.com/NipunHarshanaOfc0715/QUEEN-RASHU-MD-V2\n* *𝑾𝑯𝑨𝑻𝑺𝑨𝑷𝑷 𝑮𝑹𝑶𝑼𝑷*\n> https://chat.whatsapp.com/LmfWnYTjh605xVz5J1tgnq\n* *𝑶𝑾𝑵𝑬𝑹 𝑪𝑶𝑵𝑻𝑨𝑪𝑻*\n> wa.me/94727319036\n* *𝒀𝑶𝑼𝑻𝑼𝑩𝑬 𝑪𝑯𝑨𝑵𝑵𝑬𝑳*\n> https://youtube.com/@rashumodz_0715?si=5pg_wumwy6VzizMP\n\n~𝙌𝙐𝙀𝙀𝙉 𝙍𝘼𝙎𝙃𝙐 𝙈𝘿 𝙑2 𝘽𝙊𝙏 𝘾𝙊𝙈𝙈𝙄𝙉𝙂 𝙎𝙊𝙊𝙉~\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*
 `;
 
         // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://i.ibb.co/BsjkCDP/9555.jpg` },  // Image URL
+            image: { url: `https://i.ibb.co/MDX3Bbpt/9999.jpg` },  // Image URL
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
@@ -2264,9 +2260,9 @@ cmd({
 async (conn, mek, m, { from, isOwner, quoted, reply }) => {
     if (!isOwner) return reply("❌ You are not the owner!");
     try {
-        let desc = `*╭───╎◈𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃◈╎────╮*
+        let desc = `*╭───╎◈𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 ◈╎────╮*
 
-> *🍒💗 QUEEN RASHU MD SETTING PANEL*
+> *🍒💗 QUEEN RASHU MD V2 SETTING PANEL*
 
 - *🔢 Reply Below Number*
 
@@ -2337,7 +2333,7 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 
 > *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
 
-        const vv = await conn.sendMessage(from, { image: { url: "https://i.ibb.co/BsjkCDP/9555.jpg"}, caption: desc }, { quoted: mek });
+        const vv = await conn.sendMessage(from, { image: { url: "https://i.ibb.co/MDX3Bbpt/9999.jpg"}, caption: desc }, { quoted: mek });
 
         conn.ev.on('messages.upsert', async (msgUpdate) => {
             const msg = msgUpdate.messages[0];
@@ -2474,7 +2470,7 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 
 cmd({
   pattern: 'tinyurl',
-  alias: ['tiny', 'shorten', 'short', 'shorturl'],
+  alias: ['tiny', 'rashuurl', 'short', 'shorturl'],
   react: '🍒',
   desc: 'Shorten a URL using TinyURL or ShortURL.',
   category: 'main',
@@ -2506,7 +2502,7 @@ cmd({
   try {
     if (!q) return reply('Please provide a URL to shorten.');
 
-    await reply('> *Queen Rashu Md Processing...*');
+    await reply('> *QUEEN RASHU MD V2 Processing...*');
 
     let apiUrl = '';
     if (command === 'tiny' || command === 'tinyurl') {
@@ -2515,12 +2511,12 @@ cmd({
       apiUrl = `https://api.giftedtech.web.id/api/tools/shorturl?apikey=gifted&url=${encodeURIComponent(q)}`;
     }
 
-    await reply('> *Queen Rashu Md Shortening URL...*');
+    await reply('> *QUEEN RASHU MD V2 Shortening URL...*');
 
     const response = await fetchJson(apiUrl);
     const result = response.result;
 
-    const caption = ` \`QUEEN RASHU MD URL SHORTENER\` \n\n\n*Original Link:* ${q}\n\n*Shortened Link:* ${result}\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
+    const caption = ` \`QUEEN RASHU MD V2 V2 URL SHORTENER\` \n\n\n*Original Link:* ${q}\n\n*Shortened Link:* ${result}\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
 
    /* await conn.sendMessage(m.chat, { text: caption }, { quoted: m });
   } catch (error) {
@@ -2531,7 +2527,7 @@ cmd({
 */
  // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://i.ibb.co/BsjkCDP/9555.jpg` },  // Image URL
+            image: { url: `https://i.ibb.co/MDX3Bbpt/9999.jpg` },  // Image URL
             caption: caption,
             contextInfo: {
                 mentionedJid: [m.sender],
@@ -2539,7 +2535,7 @@ cmd({
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363368882758119@newsletter',
-                    newsletterName: '『 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 』',
+                    newsletterName: '🌹𝐐𝚵𝚵𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃‼️',
                     serverMessageId: 143
                 }
             }
@@ -2565,7 +2561,7 @@ async (conn, mek, m, { from, q, reply, isOwner }) => {
     if (!isOwner) return;
 
     if (!q) {
-        return reply("🙇‍♂️ *Please provide the environment variable and its new value.* \n\nExample: `.update ALIVE_MSG: hello i am prabath kumara`");
+        return reply("🙇‍♂️ *Please provide the environment variable and its new value.* \n\nExample: `.update ALIVE_MSG: Hellow I Am QUEEN RASHU MD V2 V2`");
     }
 
     // Find the position of the first colon or comma
@@ -2646,7 +2642,7 @@ cmd({
                 if (!activeGroups[from]) {
                     activeGroups[from] = true;
 
-                    await conn.sendMessage(from, { text: "*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Auto 24/7 News Activatrd 🌟🗞️🇱🇰*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
+                    await conn.sendMessage(from, { text: "*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 Auto 24/7 News Activatrd 🌟🗞️🇱🇰*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
 
                     if (!activeGroups['interval']) {
                         activeGroups['interval'] = setInterval(async () => {
@@ -2659,7 +2655,7 @@ cmd({
                     }
 
                 } else {
-                    await conn.sendMessage(from, { text: "*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Auto 24/7 News Already Activatrd ✅*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
+                    await conn.sendMessage(from, { text: "*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 Auto 24/7 News Already Activatrd ✅*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
                 }
             } else {
                 await conn.sendMessage(from, { text: "🚫 This command can only be used by group admins or the bot owner." });
@@ -2696,7 +2692,7 @@ cmd({
                         delete activeGroups['interval'];
                     }
                 } else {
-                    await conn.sendMessage(from, { text: "*🛑 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Auto News Is Not Active In This Group.*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
+                    await conn.sendMessage(from, { text: "*🛑 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 Auto News Is Not Active In This Group.*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
                 }
             } else {
                 await conn.sendMessage(from, { text: "🚫 This command can only be used by group admins or the bot owner." });
@@ -2716,7 +2712,8 @@ let autoBioInterval;
 
 // 1. Set AutoBIO
 cmd({
-    pattern: "setautobio123456",
+    pattern: "setautobio",
+    alias: ["bio"],
     desc: "Enable or disable the AutoBIO feature.",
     category: "owner",
     react: "👨‍💻",
@@ -2743,7 +2740,7 @@ function startAutoBio(conn) {
     // Set a new interval to update the bio every minute (or any preferred time)
     autoBioInterval = setInterval(async () => {
         const time = new Date().toLocaleTimeString();  // Get the current time
-        const bioText = `💗𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃🍒🔐 [${time}]`;  // Set the bio text with time
+        const bioText = `💗𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 🍒🔐 [${time}]`;  // Set the bio text with time
         await conn.updateProfileStatus(bioText);  // Update the bot's bio
     }, 60 * 1000);  // 1 minute interval
 }
@@ -2854,7 +2851,7 @@ cmd(cmdDetails, async (bot, message, args, { from, quoted, reply }) => {
 
     // Format the message
     const newsMessage = `
-      📑 *QUEEN RASHU MD LANKADEEPA NEWS* 📑
+      📑 *QUEEN RASHU MD V2 V2 LANKADEEPA NEWS* 📑
            
 • *Title* - ${newsData.result.title}
 
@@ -2902,7 +2899,7 @@ cmd(sirasaNewsCommand, async (client, message, args, { from, quoted, reply }) =>
   try {
     const newsData = await newss.sirasa(); // Fetch Sirasa news
     const newsMessage = `
-      🔺 *QUEEN RASHU MD SIRASA NEWS* 🔺
+      🔺 *QUEEN RASHU MD V2 SIRASA NEWS* 🔺
        
 • *Title* - ${newsData.result.title}
 
@@ -2935,7 +2932,7 @@ cmd(sirasaNewsCommand, async (client, message, args, { from, quoted, reply }) =>
 
 
 cmd({
-  pattern: "stablediffussion",
+  pattern: "img",
   alias: ['sd', "imagine2"],
   react: '🎉',
   desc: "Generate an image using AI API.",
@@ -2969,7 +2966,7 @@ cmd({
     if (!q) {
       return reply("Please provide a prompt for the image.");
     }
-    await reply("Queen Rashu Md Diffussing Your image...");
+    await reply("QUEEN RASHU MD V2 Diffussing Your image...");
     let response = await fetchJson("https://api.giftedtech.web.id/api/ai/fluximg?apikey=gifted&prompt=" + q);
     const imageUrl = response.result;
     await message.sendMessage(metadata.chat, {
@@ -3037,8 +3034,8 @@ cmd({
 });
 
 cmd({
-  pattern: 'ai',
-  alias: ["chatgpt", "gpt"],
+  pattern: 'aixhdhhhh',
+  //alias: ["chatgpt", "gpt"],
   react: '🤖',
   desc: "AI chat.",
   category: "main",
@@ -3076,7 +3073,7 @@ cmd({
     if (!aiResponse.message) {
       return reply("No response from the AI.");
     }
-    return reply(" `🤖 QUEEN RASHU MD AI RESPONSE:` \n\n" + aiResponse.message);
+    return reply(" `🤖 QUEEN RASHU MD V2 AI RESPONSE:` \n\n" + aiResponse.message);
   } catch (error) {
     console.error(error);
     reply("An error occurred: " + error.message);
@@ -3086,7 +3083,7 @@ cmd({
 //=================( )=================
 
 cmd({
-  pattern: "mistraai",
+  pattern: "ai",
   alias: ["mistra", "zimai"],
   react: '🪄',
   desc: "AI chat.",
@@ -3125,7 +3122,7 @@ cmd({
     if (!aiResponse.message) {
       return reply("No response from the AI.");
     }
-    return reply(" `🤖 QUEEN RASHU MD MISTRA AI:` \n\n" + aiResponse.message);
+    return reply(" `🤖 QUEEN RASHU MD V2 MISTRA AI:` \n\n" + aiResponse.message);
   } catch (error) {
     console.error(error);
     reply("An error occurred: " + error.message);
@@ -3135,8 +3132,8 @@ cmd({
 //=================( )=================
 
 cmd({
-  pattern: "gpt3",
-  alias: ["gptturbo", "chatgpt3"],
+  pattern: "gptfndh3",
+  //alias: ["gptturbo", "chatgpt3"],
   react: '😇',
   desc: "AI chat.",
   category: "main",
@@ -3174,7 +3171,7 @@ cmd({
     if (!aiResponse.message) {
       return reply("No response from the AI.");
     }
-    return reply(" `🤖 QUEEN RASHU MD CHATGPT 3:` \n\n" + aiResponse.message);
+    return reply(" `🤖 QUEEN RASHU MD V2 CHATGPT 3:` \n\n" + aiResponse.message);
   } catch (error) {
     console.error(error);
     reply("An error occurred: " + error.message);
@@ -3184,8 +3181,8 @@ cmd({
 //=================( )=================
 
 cmd({
-  pattern: 'gpt4',
-  alias: ['ai4', 'chatgpt4'],
+  pattern: 'gptcnfhjf4',
+  alias: ['aifbdb4', 'chatgfndndpt4'],
   react: '🪄',
   desc: "AI chat.",
   category: "main",
@@ -3223,7 +3220,7 @@ cmd({
     if (!response.message) {
       return reply("No response from the AI.");
     }
-    return reply(`🤖 QUEEN RASHU MD CHATGPT 4: \n\n${response.message}`);
+    return reply(`🤖 QUEEN RASHU MD V2 CHATGPT 4: \n\n${response.message}`);
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
@@ -3233,8 +3230,8 @@ cmd({
 //=================( )=================
 
 cmd({
-  pattern: "llama3",
-  alias: ["llama", "model3"],
+  pattern: "llamsjssssusa3",
+  //alias: ["llama", "model3"],
   react: '✅',
   desc: "AI chat.",
   category: 'main',
@@ -3272,7 +3269,7 @@ cmd({
     if (!response.message) {
       return reply("No response from the AI.");
     }
-    return reply(`🤖 QUEEN RASHU MD LLAM AI: \n\n${response.message}`);
+    return reply(`🤖 QUEEN RASHU MD V2 LLAM AI: \n\n${response.message}`);
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
@@ -3282,8 +3279,8 @@ cmd({
 //=================( )=================
 
 cmd({
-  pattern: "metai",
-  alias: ["meta", "llama2"],
+  pattern: "metaishshsh",
+  alias: ["medhxhdta", "llamxjdndnskllla2"],
   react: '🔄',
   desc: "AI chat.",
   category: "main",
@@ -3321,7 +3318,7 @@ cmd({
     if (!response.message) {
       return reply("No response from the AI.");
     }
-    return reply(`🤖 QUEEN RASHU MD META AI: \n\n${response.message}`);
+    return reply(`🤖 QUEEN RASHU MD V2 META AI: \n\n${response.message}`);
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
@@ -3331,8 +3328,8 @@ cmd({
 //=================( )=================
 
 cmd({
-  pattern: 'gpt4o',
-  alias: ['ai4', 'chatgpt4'],
+  pattern: 'gpt4djdhso',
+  alias: ['axxjdi4', 'chatgdjdjdjpt4'],
   react: '🟢',
   desc: "AI chat.",
   category: "main",
@@ -3370,7 +3367,7 @@ cmd({
     if (!response.message) {
       return reply("No response from the AI.");
     }
-    return reply(`🤖 QUEEN RASHU MD CHATGPT 4o: \n\n${response.message}`);
+    return reply(`🤖 QUEEN RASHU MD V2 CHATGPT 4o: \n\n${response.message}`);
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
@@ -3378,8 +3375,8 @@ cmd({
 });
 
 cmd({
-  pattern: "gemini",
-  alias: ['bard', 'bing'],
+  pattern: "geminidhsbsbahaba",
+  alias: ['badhdhdrd', 'bindndhdbg'],
   react: '⏳',
   desc: "AI chat.",
   category: "main",
@@ -3417,7 +3414,7 @@ cmd({
     if (!response.message) {
       return reply("No response from the AI.");
     }
-    return reply(`🤖 QUEEN RASHU MD GOOGLE AI: \n\n${response.message}`);
+    return reply(`🤖 QUEEN RASHU MD V2 GOOGLE AI: \n\n${response.message}`);
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);

@@ -1135,9 +1135,9 @@ cmd(command, async (client, message, args, { from, quoted, reply }) => {
 });
 
 const img2UrlCommand = {
-  pattern: "img2url",
+  pattern: "tourl2",
   react: "🔗",
-  alias: ["tourl","url","imgurl","telegraph","imgtourl"]
+  //alias: ["tourl","url","imgurl","telegraph","imgtourl"]
 };
 
 function helperFunction(param1, param2, param3, param4, param5) {

@@ -44,7 +44,7 @@ cmd(forwardCommand, async (
         await conn.sendMessage(q, { forward: forwardMessage }, { quoted: mek });
 
         // Send a confirmation to the owner
-        return reply(`*Message forwarded successfully to:*\n\n${q}`);
+        return reply(`*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕2 Message forwarded successfully to:*\n\n${q}\n\n> *𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 🫟*`);
     } catch (error) {
         // Handle errors
         console.error("Error forwarding message:", error);

@@ -1,69 +1,98 @@
-const { cmd } = require('../command');
-const { exec } = require('child_process');
-const config = require('../config');
+const {
+    default: makeWASocket,
+    getAggregateVotesInPollMessage, 
+    useMultiFileAuthState,
+    DisconnectReason,
+    getDevice,
+    fetchLatestBaileysVersion,
+    jidNormalizedUser,
+    getContentType,
+    Browsers,
+    delay,
+    makeInMemoryStore,
+    makeCacheableSignalKeyStore,
+    downloadContentFromMessage,
+    generateForwardMessageContent,
+    generateWAMessageFromContent,
+    prepareWAMessageMedia,
+    proto
+} = require('@whiskeysockets/baileys')
+const fs = require('fs')
+const FileType = require('file-type')
+const config = require('../config')
+const {cmd , commands} = require('../command')
 
 
-cmd(
-  {
-    pattern: "botupdate",
-    desc: "Restart the bot",
-    category: "owner",
-    react: "🔄",
-    filename: __filename,
-  },
-  async (
-    conn,
-    mek,
-    m,
-    {
-      from,
-      quoted,
-      body,
-      isCmd,
-      command,
-      args,
-      q,
-      isGroup,
-      sender,
-      senderNumber,
-      botNumber2,
-      botNumber,
-      pushname,
-      isMe,
-      isOwner,
-      groupMetadata,
-      groupName,
-      participants,
-      groupAdmins,
-      isBotAdmins,
-      isAdmins,
-      reply,
-    }
-  ) => {
-    try {
-      if (!isOwner) {
-    return reply("❌ You Are Not The Owner !");
-  }
-      const { exec } = require("child_process");
-      reply("*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Bot New Update*");
-      await new Promise((resolve) => setTimeout(resolve, 1500)); // Sleep function
-      exec("pm2 restart all", (error, stdout, stderr) => {
-        if (error) {
-          console.error(`Error: ${error.message}`);
-          reply(`Error: ${error.message}`);
-          return;
-        }
-        if (stderr) {
-          console.error(`Stderr: ${stderr}`);
-          reply(`Stderr: ${stderr}`);
-          return;
-        }
-        console.log(`Stdout: ${stdout}`);
-        reply("𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Bot Restarting successfully. ✅\n\n> *𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ❀*");
-      });
-    } catch (e) {
-      console.error(e);
-      reply(`An error occurred: ${e.message}`);
-    }
-  }
-);
+cmd({
+    pattern: "vv",
+    react: "😁",
+    alias: ["mattu","dakkada","mekada","supiri"],
+    desc: "To ViewOnceMessage",
+    category: "convert",
+    use: '.vv',
+    filename: __filename
+},
+async(conn, mek, m,{from, prefix, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{         
+
+conn.downloadAndSaveMediaMessage = async(message, filename, attachExtension = true) => {
+                let quoted = message.msg ? message.msg : message
+                let mime = (message.msg || message).mimetype || ''
+                let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
+                const stream = await downloadContentFromMessage(quoted, messageType)
+                let buffer = Buffer.from([])
+                for await (const chunk of stream) {
+                    buffer = Buffer.concat([buffer, chunk])
+                }
+                let type = await FileType.fromBuffer(buffer)
+                trueFileName = attachExtension ? (filename + '.' + type.ext) : filename
+                    // save to file
+                await fs.writeFileSync(trueFileName, buffer)
+                return trueFileName
+            }	      
+   
+  
+const quot = mek.msg.contextInfo.quotedMessage.viewOnceMessageV2;
+if(quot)
+{
+if(quot.message.imageMessage) 
+{ console.log("Quot Entered") 
+   let cap =quot.message.imageMessage.caption;
+   let anu = await conn.downloadAndSaveMediaMessage(quot.message.imageMessage)
+   return conn.sendMessage(from,{image:{url : anu},caption : cap })
+}
+if(quot.message.videoMessage) 
+{
+   let cap =quot.message.videoMessage.caption;
+   let anu = await conn.downloadAndSaveMediaMessage(quot.message.videoMessage)
+   return conn.sendMessage(from,{video:{url : anu},caption : cap })
+}
+ 
+}
+//else citel.reply("```This is Not A ViewOnce Message```") 
+       
+       
+if(!mek.quoted) return mek.reply("```Uh Please Reply A ViewOnce Message```")           
+if(mek.quoted.mtype === "viewOnceMessage")
+{ console.log("ViewOnce Entered") 
+ if(mek.quoted.message.imageMessage )
+{ 
+  let cap = mek.quoted.message.imageMessage.caption;
+  let anu = await conn.downloadAndSaveMediaMessage(mek.quoted.message.imageMessage)
+  conn.sendMessage(from,{image:{url : anu},caption : cap })
+}
+else if(mek.quoted.message.videoMessage )
+{
+  let cap =mek.quoted.message.videoMessage.caption;
+  let anu = await conn.downloadAndSaveMediaMessage(mek.quoted.message.videoMessage)
+  conn.sendMessage(from,{video:{url : anu},caption : cap })
+}
+
+}
+else return mek.reply("```This is Not A ViewOnce Message```")
+await conn.sendMessage(from, { react: { text: `✅`, key: mek.key }}) 
+}catch(e){
+console.log(e)
+reply(`*THERE IS AN ERRER☹️*`)
+}
+})
